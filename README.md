@@ -24,7 +24,9 @@ A small CNN is used **before all models** to detect and fix this issue.
 
 A reconstruction-based model that learns normal **appearance and motion** from short video clips.
 
-- **Input:** 16 consecutive frames stacked as spatio-temporal cuboids  
+- **Input:** 16 consecutive frames stacked as spatio-temporal cuboids
+- **Augmentations:** Using a customized noise function to simulate corrupted inputs
+  - Uniform noise in `[-0.1373, 0.1373]` with 40% probability   
 - **Architecture:**
   - Encoder: 4 convolution blocks (64 → 128 → 256 → 512)  
   - Decoder: Symmetric transposed convolutions  
