@@ -51,7 +51,9 @@ A memory-based anomaly detection method using **frozen CLIP features** at spatia
 
 ### Feature Extraction
 - **Backbone:** CLIP RN101 (frozen)  
-- **Layers Used:** layer2[-1], layer3[-1]  
+- **Backbone for object localization:** YOLOv5l (frozen)  
+- **Layers Used:** layer2[-1], layer3[-1]
+  
 
 ### Feature Types
 - **Spatial:** Channel-pooled local features (CNL_POOL = 32)  
